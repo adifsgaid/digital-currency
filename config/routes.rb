@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :currencies
-  devise_for :users
-  root to: 'application#index'
+  root 'pages#index'
+
+  resources :currencies, only: %i[index show]
+  # devise_for :users
 end
