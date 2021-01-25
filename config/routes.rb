@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   namespace :api do
-    namespace :v1 do 
+    namespace :v1 do
       resource :currencies, param: :slug
-      resource :reviews, only [:create, :destroy]
+      resource :reviews, only: %i[create destroy]
     end
   end
 
