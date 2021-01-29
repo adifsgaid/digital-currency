@@ -1,6 +1,7 @@
 module Api
   module V1
     class CurrenciesController < ApplicationController
+      protect_from_forgery whith: :null_session
       def index
         currencies = Currency.all
 
@@ -8,7 +9,7 @@ module Api
       end
 
       def show
-        currency = Currency.find(slug: params[:slug])
+        currency = Currency.(slug: params[:slug])
 
         render json: CurrencySerializer.new(currency, options).serialized_json
       end
