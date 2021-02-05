@@ -7,7 +7,6 @@ Rails.application.routes.draw do
       resource :reviews, only: %i[create destroy]
     end
   end
-
   get '*path', to: 'pages#index', via: :all
   # This will allow to use react router whitout interfering whit rails route
 end
