@@ -1,6 +1,6 @@
 class CurrencySerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :img_url, :slug
+  attributes :name, :slug, :img_url
 
   has_many :reviews
 end

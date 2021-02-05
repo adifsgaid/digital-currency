@@ -9,7 +9,7 @@ module Api
       end
 
       def show
-        currency = Currency.(slug: params[:slug])
+        currency = Currency.find_by(slug: params[:slug])
 
         render json: CurrencySerializer.new(currency, options).serialized_json
       end

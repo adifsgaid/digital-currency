@@ -11,4 +11,3 @@ Rails.application.routes.draw do
   get '*path', to: 'pages#index', via: :all
   # This will allow to use react router whitout interfering whit rails route
 end
-
