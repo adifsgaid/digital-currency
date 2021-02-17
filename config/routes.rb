@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resource :currencies, param: :slug
-      resource :reviews, only: %i[create destroy]
+      resources :currencies, param: :slug
+      resources :reviews, only: %i[create destroy]
     end
   end
   get '*path', to: 'pages#index', via: :all

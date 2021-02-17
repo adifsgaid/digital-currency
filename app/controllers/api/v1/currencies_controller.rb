@@ -1,7 +1,10 @@
 module Api
+
   module V1
+
     class CurrenciesController < ApplicationController
       protect_from_forgery with: :null_session
+
       def index
         currencies = Currency.all
 
