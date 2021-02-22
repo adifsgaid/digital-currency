@@ -1,9 +1,13 @@
 import React from 'react'
+import {Route, Switch}  from 'react-router-dom'
 
 const App = () => {
-  return(<div>
-  <h1 className='text-center'>Hello world</h1>
-  </div> )
+  return(
+    <Switch>
+    <Route exact path='/' component={Currencies}/>
+    <Route exact path='/Currencies/:slug' component={Currency}/>
+    </Switch>
+    )
 }
 
 export default App
