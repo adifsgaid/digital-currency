@@ -6,6 +6,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import App from '../components/App'
+import Currencies from '../Currencies/Currencies'
+import Currency from '../Currency/Currency'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 document.addEventListener('DOMContentLoaded', () => {
