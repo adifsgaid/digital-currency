@@ -1,13 +1,15 @@
-import React from 'react'
-import {Route, Switch}  from 'react-router-dom'
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Currencies from "./Currencies/Currencies";
+import Currency from "./Currency/Currency";
 
 const App = () => {
-  return(
+  return (
     <Switch>
-    <Route exact path='/' component={Currencies}/>
-    <Route exact path='/Currencies/:slug' component={Currency}/>
+      <Route exact path="/" component={Currencies} />
+      <Route exact path="/Currencies/:slug" component={Currency} />
     </Switch>
-    )
-}
+  );
+};
 
-export default App
+export default App;

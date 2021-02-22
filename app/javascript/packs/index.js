@@ -2,19 +2,17 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-import App from '../components/App'
-import Currencies from '../Currencies/Currencies'
-import Currency from '../Currency/Currency'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
+import App from "../components/App";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
     <Router>
-      <Route path='/' commponent={App}/>
+      <Route path="/" commponent={App} />
     </Router>,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+    document.body.appendChild(document.createElement("div"))
+  );
+});

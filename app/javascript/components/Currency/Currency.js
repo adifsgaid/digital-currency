@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Currency = () => {
-  return(
-    <div>
-    <h1>This is the currency Show index </h1>
-    </div>)
+  return <div>This is the currency#Show</div>;
+};
 
-}
-
-export default Currency
+export default Currency;
