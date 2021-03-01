@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
+import Currency from "./Currency";
 
 export const Currencies = () => {
   const [currencies, setCurrencies] = useState([]);
@@ -12,8 +13,8 @@ export const Currencies = () => {
       .catch((response) => console.log(response));
   }, [currencies.length]);
 
-  const list = currencies.map((item) => {
-    return <li key={item.attributes.name}>{item.attributes.name}</li>;
+  const grid = currencies.map((item) => {
+    return <Currency key={item.attributes.name} attributes={item.attributes} />;
   });
 
   return (
@@ -24,7 +25,7 @@ export const Currencies = () => {
           Honest Reviews About Your Favorite Currency
         </div>
         <div className="grid"></div>
-        <ul>{list}</ul>
+        <ul>{grid}</ul>
       </div>
     </div>
   );
