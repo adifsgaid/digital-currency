@@ -1,6 +1,6 @@
 import React from "react";
 
-const Currency = () => {
+export const Currency = () => {
   return <div>This is the currency#Show</div>;
 };
 

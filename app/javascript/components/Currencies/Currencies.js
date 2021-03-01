@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Currencies = () => {
-  return <h1>This is the currencies#index</h1>;
+export const Currencies = () => {
+  const [currencies, setCurrencies] = useState([]); 
+  useEffect(() =>{
+    
+  })
+  return <div>This is the currencies#Index</div>;
 };
 
 export default Currencies;
