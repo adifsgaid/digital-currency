@@ -5,12 +5,13 @@ import styled from "styled-components";
 
 const Home = styled.div`
   text-align: center;
-  max-width: 1200px;
+  width: 100%;
 `;
 const Header = styled.div`
-  padding: 50px 100px 10px 50px;
+  padding: 10px 100px 10px 50px;
   h1 {
     font-size: 42px;
+    font-family: sans-serif;
   }
 `;
 const SubHeader = styled.div`
@@ -19,7 +20,7 @@ const SubHeader = styled.div`
 `;
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   width: 100%;
   padding: 20px;
