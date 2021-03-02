@@ -1,6 +1,31 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import Currency from "./Currency";
+import styled from "styled-components";
+
+const Home = styled.div`
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-rigth: auto;
+`;
+const Header = styled.div`
+  padding: 100px 100px 10px 100px;
+  h1 {
+    font-size: 42px;
+  }
+`;
+const SubHeader = styled.div`
+  font-size: 26px;
+  font-weight: 300;
+`;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  padding: 20px;
+`;
 
 export const Currencies = () => {
   const [currencies, setCurrencies] = useState([]);
@@ -18,16 +43,13 @@ export const Currencies = () => {
   });
 
   return (
-    <div className="home">
-      <div className="header">
+    <Home>
+      <Header>
         <h1>Digital Currencies Bible</h1>
-        <div className="subHeader">
-          Honest Reviews About Your Favorite Currency
-        </div>
-        <div className="grid"></div>
-        <ul>{grid}</ul>
-      </div>
-    </div>
+        <SubHeader>Honest Reviews About Your Favorite Currency</SubHeader>
+        <Grid>{grid}</Grid>
+      </Header>
+    </Home>
   );
 };
 
