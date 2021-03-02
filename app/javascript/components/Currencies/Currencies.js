@@ -6,11 +6,9 @@ import styled from "styled-components";
 const Home = styled.div`
   text-align: center;
   max-width: 1200px;
-  margin-left: auto;
-  margin-rigth: auto;
 `;
 const Header = styled.div`
-  padding: 100px 100px 10px 100px;
+  padding: 50px 100px 10px 50px;
   h1 {
     font-size: 42px;
   }
