@@ -3,18 +3,26 @@ import React from "react";
 export const ReviewForm = (props) => {
   return (
     <div className="wrapper">
-      <form>
+      <form onSubmit={props.HandleSubmit}>
         <div>
           What do you think about this Currency.name? share your thoghts{" "}
         </div>
         <div className="field">
-          <input type="text" name="title" placeholder="Review Title " />
+          <input
+            onChange={HandleChange}
+            type="text"
+            name="title"
+            placeholder="Review Title "
+            value={props.review.title}
+          />
         </div>
         <div className="field">
           <input
             type="text"
             name="description"
-            placeholder="Review Description "
+            placeholder="Review Description"
+            onChange={HandleChange}
+            value={props.review.description}
           />
         </div>
         <div className="field">
