@@ -49,10 +49,11 @@ export const Currency = (props) => {
       .catch((response) => console.log(response));
   }, []);
 
-  const HandleChange = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
+    console.log("name:", e.target.name, "value:", e.target.value);
   };
-  const HandleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
 
@@ -71,8 +72,8 @@ export const Currency = (props) => {
           </Column>
           <Column>
             <ReviewForm
-              HandleChange={HandleChange}
-              HandleSubmit={HandleSubmit}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
               attributes={currency.data.attributes}
               review={review}
             />

@@ -3,13 +3,14 @@ import React from "react";
 export const ReviewForm = (props) => {
   return (
     <div className="wrapper">
-      <form onSubmit={props.HandleSubmit}>
+      <form onSubmit={props.handleSubmit}>
         <div>
-          What do you think about this Currency.name? share your thoghts{" "}
+          What do you think about this {props.attributes.name}? share your
+          thoghts
         </div>
         <div className="field">
           <input
-            onChange={HandleChange}
+            onChange={props.handleChange}
             type="text"
             name="title"
             placeholder="Review Title "
@@ -21,7 +22,7 @@ export const ReviewForm = (props) => {
             type="text"
             name="description"
             placeholder="Review Description"
-            onChange={HandleChange}
+            onChange={props.handleChange}
             value={props.review.description}
           />
         </div>
