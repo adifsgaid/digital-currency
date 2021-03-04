@@ -51,19 +51,24 @@ export const Currency = (props) => {
 
   const handleChange = (e) => {
     e.preventDefault();
+
     setReview(Object.assign({}, review, { [e.target.name]: e.target.value }));
+
     console.log("review:", review);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const csrfToken = document.querySelector("[name=csrf-token]").content;
-    axios.defaults.headers.token["X-CRSF-TOKEN"] = csrfToken;
+    axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
 
     const currency_id = currency.data.id;
     axios
-      .post("/ api/v1/reviews", { reviews, currency_id })
-      .then((response) => {})
+      .post("/api/v1/reviews", { review, currency_id })
+      .then((response) => {
+        debugger;
+      })
       .catch((response) => {});
   };
 
