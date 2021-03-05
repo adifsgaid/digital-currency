@@ -70,7 +70,7 @@ export const Currency = (props) => {
         debugger;
       })
       .catch((response) => {});
-  };
+  }; 
 
   return (
     <Wrapper>

@@ -30,7 +30,7 @@ module Api
       end
 
       def review_params
-        params.require(:review).permit(:title, :description, :rating)
+        params.require(:review).permit(:title, :description, :rating, :currency_id)
       end
     end
   end
