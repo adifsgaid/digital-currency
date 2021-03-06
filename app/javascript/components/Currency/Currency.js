@@ -64,6 +64,7 @@ export const Currency = (props) => {
     axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
 
     const currency_id = currency.data.id;
+    
     axios
       .post("/api/v1/reviews", { review, currency_id })
       .then((response) => {
