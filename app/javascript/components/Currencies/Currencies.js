@@ -20,7 +20,7 @@ const SubHeader = styled.div`
 `;
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   width: 100%;
   padding: 20px;
@@ -29,7 +29,8 @@ const Grid = styled.div`
 export const Currencies = () => {
   const [currencies, setCurrencies] = useState([]);
   useEffect(() => {
-    axios.get("api/v1/currencies.json")
+    axios
+      .get("api/v1/currencies.json")
       .then((response) => {
         setCurrencies(response.data.data);
       })
