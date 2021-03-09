@@ -1,4 +1,51 @@
 import React, { Fragment } from "react";
+import styled from "styled-components";
+import Gray from "./Stars/Gray";
+import Selected from "./Stars/Selected";
+import Hover from "./Stars/Hover";
+
+const RatingContainer = styled.div`
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 40px 0px 10px 0px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+`;
+
+const RatingStars = styled.div`
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  position: relative;
+
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml;charset=UTF8,${Gray}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+  }
+
+  input:checked ~ label,
+  input:checked ~ label ~ label {
+    background-image: url("data:image/svg+xml;charset=UTF8,${Selected}");
+  }
+
+  input:not(:checked) ~ label:hover,
+  input:not(:checked) ~ label:hover ~ label {
+    background-image: url("data:image/svg+xml;charset=UTF8,${Hover}");
+  }
+`;
+const RatingTitle = styled.div``;
 
 export const ReviewForm = (props) => {
   const RatingOptions = [5, 4, 3, 2, 1].map((rating, index) => {
@@ -15,6 +62,7 @@ export const ReviewForm = (props) => {
       </Fragment>
     );
   });
+
   return (
     <div className="wrapper">
       <form onSubmit={props.handleSubmit}>
@@ -41,9 +89,10 @@ export const ReviewForm = (props) => {
           />
         </div>
         <div className="field">
-          <div className="rating-container"></div>
-          <div className="rating-title-text"> Rate This Currency</div>
-          {RatingOptions}
+          <RatingContainer>
+            <div className="rating-title-text"> Rate This Currency</div>
+            <RatingStars>{RatingOptions}</RatingStars>
+          </RatingContainer>
         </div>
         <button type="submit"> Submit Your Thoghts</button>
       </form>

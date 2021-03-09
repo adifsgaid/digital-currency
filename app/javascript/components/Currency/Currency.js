@@ -6,6 +6,7 @@ import ReviewForm from "./ReviewForm";
 
 const Wrapper = styled.div`
   margin-left: auto;
+  font-family: sans-serif;
   margin-right: auto;
 `;
 
