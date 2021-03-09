@@ -1,6 +1,20 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 export const ReviewForm = (props) => {
+  const RatingOptions = [5, 4, 3, 2, 1].map((rating, index) => {
+    return (
+      <Fragment>
+        <input
+          type="radio"
+          value={rating}
+          name="rating"
+          onChange={() => console.log("rating:", rating)}
+          id={`rating-${rating}`}
+        />
+        <label></label>
+      </Fragment>
+    );
+  });
   return (
     <div className="wrapper">
       <form onSubmit={props.handleSubmit}>
@@ -29,7 +43,7 @@ export const ReviewForm = (props) => {
         <div className="field">
           <div className="rating-container"></div>
           <div className="rating-title-text"> Rate This Currency</div>
-          [rates component goes here ]
+          {RatingOptions}
         </div>
         <button type="submit"> Submit Your Thoghts</button>
       </form>
