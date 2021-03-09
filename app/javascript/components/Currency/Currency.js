@@ -79,9 +79,7 @@ export const Currency = (props) => {
   };
 
   const setRatings = (rating, e) => {
-    e.preventDefault();
-
-    debugger;
+    setReview({ ...review, rating });
   };
 
   return (
