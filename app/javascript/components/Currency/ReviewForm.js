@@ -56,9 +56,10 @@ export const ReviewForm = (props) => {
           value={rating}
           name="rating"
           onChange={() => console.log("rating:", rating)}
+          checked={props.review.rating == rating}
           id={`rating-${rating}`}
         />
-        <label></label>
+        <label onClick={props.setRatings.bind(this, rating)}></label>
       </Fragment>
     );
   });

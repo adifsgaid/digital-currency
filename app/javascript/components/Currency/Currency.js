@@ -78,6 +78,12 @@ export const Currency = (props) => {
       });
   };
 
+  const setRatings = (rating, e) => {
+    e.preventDefault();
+
+    debugger;
+  };
+
   return (
     <Wrapper>
       {loaded && (
@@ -95,6 +101,7 @@ export const Currency = (props) => {
             <ReviewForm
               handleChange={handleChange}
               handleSubmit={handleSubmit}
+              setRatings={setRatings}
               attributes={currency.data.attributes}
               review={review}
             />
