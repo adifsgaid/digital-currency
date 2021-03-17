@@ -15,13 +15,7 @@ const Column = styled.div`
   max-width: 50%;
   width: 50%;
   float: left;
-  height: 100vh;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  height: 98vh;
   &:last-child {
     background: black;
     border-top: 1px solid rgba(255, 255, 255, 0.5);

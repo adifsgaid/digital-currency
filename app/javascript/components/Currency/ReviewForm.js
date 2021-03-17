@@ -116,8 +116,13 @@ const HeadLine = styled.div`
   padding: 15px 0;
   font-weight: bold;
   color: #fff;
+  text-align: center;
 `;
 
+const NameCurrency = styled.div`
+  display: inline;
+  color: gold;
+`;
 export const ReviewForm = (props) => {
   const RatingOptions = [5, 4, 3, 2, 1].map((rating, index) => {
     return (
@@ -139,7 +144,8 @@ export const ReviewForm = (props) => {
     <div className="wrapper">
       <form onSubmit={props.handleSubmit}>
         <HeadLine>
-          What do you think about this {props.attributes.name}? share your
+          What do you think about{" "}
+          <NameCurrency> {props.attributes.name} </NameCurrency>? share your
           thoghts
         </HeadLine>
         <Field>
