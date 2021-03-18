@@ -63,12 +63,13 @@ export const Currency = (props) => {
     axios
       .post("/api/v1/reviews", { review, currency_id })
       .then((response) => {
+        debugger;
         const included = [...currency, response.data.data];
         setCurrency({ ...currency, included });
         setReview({ title: "", description: "", rating: 0 });
       })
       .catch((response) => {
-        console.log(response);
+        console.error(response);
       });
   };
 

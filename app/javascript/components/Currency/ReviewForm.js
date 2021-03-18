@@ -144,7 +144,7 @@ export const ReviewForm = (props) => {
     <div className="wrapper">
       <form onSubmit={props.handleSubmit}>
         <HeadLine>
-          What do you think about{" "}
+          What do you think about
           <NameCurrency> {props.attributes.name} </NameCurrency>? share your
           thoghts
         </HeadLine>
