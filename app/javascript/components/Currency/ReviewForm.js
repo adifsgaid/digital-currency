@@ -118,6 +118,15 @@ const HeadLine = styled.div`
   color: #fff;
   text-align: center;
 `;
+const Error = styled.div`
+  width: 100%;
+  color: rgb(255, 80, 44);
+  border: 1px solid rgb(255, 80, 44);
+  border-radius: 4px;
+  margin-top: 8px;
+  text-align: center;
+  padding: 4px;
+`;
 
 const NameCurrency = styled.div`
   display: inline;
@@ -172,7 +181,8 @@ export const ReviewForm = (props) => {
             <RatingStars>{RatingOptions}</RatingStars>
           </RatingContainer>
         </Field>
-        <SubmitBtn type="submit"> Submit Your Thoghts</SubmitBtn>
+        <button type="submit"> Submit Your Thoghts</button>
+        {props.error && <Error>{props.error}</Error>}
       </form>
     </div>
   );
