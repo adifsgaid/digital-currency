@@ -141,7 +141,7 @@ export const ReviewForm = (props) => {
   });
 
   return (
-    <div className="wrapper">
+    <Wrapper>
       <form onSubmit={props.handleSubmit}>
         <HeadLine>
           What do you think about
@@ -174,7 +174,7 @@ export const ReviewForm = (props) => {
         </Field>
         <SubmitBtn type="submit"> Submit Your Thoghts</SubmitBtn>
       </form>
-    </div>
+    </Wrapper>
   );
 };
 

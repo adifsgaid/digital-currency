@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const totalReview = styled.div`
+const TotalReview = styled.div`
   font-size: 18px;
   padding: 10px 0;
 `;
@@ -35,7 +35,7 @@ export const Header = ({ reviews, ...props }) => {
         {name}
       </h1>
       <div>
-        <totalReview>{reviews ? reviews.length : 0} User Reviews</totalReview>
+        <TotalReview>{reviews ? reviews.length : 0} User Reviews</TotalReview>
         <div className="startRating"></div>
         <ScoreOutOf>{avg_score} out of 5</ScoreOutOf>
       </div>
