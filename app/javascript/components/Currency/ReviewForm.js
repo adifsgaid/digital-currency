@@ -91,7 +91,7 @@ const Field = styled.div`
   }
 `;
 
-const SubmitBtn = styled.div`
+const SubmitBtn = styled.button`
   margin-top: 80px;
   color: #fff;
   background-color: #71b406;
@@ -135,7 +135,7 @@ const NameCurrency = styled.div`
 export const ReviewForm = (props) => {
   const RatingOptions = [5, 4, 3, 2, 1].map((rating, index) => {
     return (
-      <Fragment>
+      <Fragment key={index}>
         <input
           type="radio"
           value={rating}
@@ -181,7 +181,7 @@ export const ReviewForm = (props) => {
             <RatingStars>{RatingOptions}</RatingStars>
           </RatingContainer>
         </Field>
-        <button type="submit"> Submit Your Thoghts</button>
+        <SubmitBtn type="Submit"> Submit Your Thoghts</SubmitBtn>
         {props.error && <Error>{props.error}</Error>}
       </form>
     </div>
