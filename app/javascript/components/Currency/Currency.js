@@ -65,7 +65,7 @@ export const Currency = (props) => {
       .post("/api/v1/reviews", { review, currency_id })
       .then((response) => {
         const included = [...currency.included, response.data.data];
-        console.log(included);
+        // console.log(included);
         setCurrency({ ...currency, included });
         setReview({ title: "", description: "", rating: 0 });
       })
