@@ -66,6 +66,7 @@ export const Currency = (props) => {
         const included = [...currency, response.data.data];
         setCurrency({ ...currency, included });
         setReview({ title: "", description: "", rating: 0 });
+        setError("");
       })
       .catch((response) => {
         console.log(response);
@@ -73,6 +74,7 @@ export const Currency = (props) => {
   };
 
   const setRatings = (rating, e) => {
+    e.preventDefault();
     setReview({ ...review, rating });
   };
 
