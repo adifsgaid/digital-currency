@@ -18,7 +18,6 @@ const Column = styled.div`
   float: left;
   height: 98vh;
   &:last-child {
-    background: black;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
   }
 `;
