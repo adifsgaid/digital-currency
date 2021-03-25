@@ -182,7 +182,6 @@ export const ReviewForm = (props) => {
           </RatingContainer>
         </Field>
         <SubmitBtn type="Submit"> Submit Your Thoghts</SubmitBtn>
-        {props.error && <Error>{props.error}</Error>}
       </form>
     </div>
   );

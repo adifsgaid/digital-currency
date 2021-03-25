@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "./Header";
 import styled from "styled-components";
 import ReviewForm from "./ReviewForm";
+import Review from "./Review";
 
 const Wrapper = styled.div`
   margin-left: auto;
@@ -63,20 +64,25 @@ export const Currency = (props) => {
     axios
       .post("/api/v1/reviews", { review, currency_id })
       .then((response) => {
-        const included = [...currency, response.data.data];
+        const included = [...currency.included, response.data.data];
+        console.log(included);
         setCurrency({ ...currency, included });
         setReview({ title: "", description: "", rating: 0 });
-        setError("");
       })
-      .catch((response) => {
-        console.log(response);
-      });
+      .catch((response) => console.log(response));
   };
 
   const setRatings = (rating, e) => {
     e.preventDefault();
     setReview({ ...review, rating });
   };
+
+  let reviews;
+  if (loaded && currency.included) {
+    reviews = currency.included.map((item, index) => {
+      return <Review key={index} attributes={item.attributes} />;
+    });
+  }
 
   return (
     <Wrapper>
@@ -89,7 +95,7 @@ export const Currency = (props) => {
                 reviews={currency.included}
               />
             </Main>
-            <div className="review"></div>
+            {reviews}
           </Column>
           <Column>
             <ReviewForm
