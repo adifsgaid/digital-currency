@@ -24,6 +24,7 @@ const Grid = styled.div`
   grid-gap: 20px;
   width: 100%;
   padding: 20px;
+
 `;
 
 export const Currencies = () => {
