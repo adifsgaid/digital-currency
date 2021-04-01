@@ -1,0 +1,11 @@
+body,
+html {
+  margin: 0;
+  overflow-x: hidden;
+}
+h1 {
+  font-family: "Poppins-ExtraBold", sans-serif;
+}
+p {
+  font-family: "Poppins-ExtraLight", sans-serif;
+}

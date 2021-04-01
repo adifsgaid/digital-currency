@@ -37,7 +37,7 @@ export const Header = ({ reviews, ...props }) => {
       <div>
         <UserReviewCount>
           <span className="review-count">{reviews ? reviews.length : 0} </span>
-           user reviews
+          User Reviews
         </UserReviewCount>
         <div className="startRating"></div>
         <ScoreOutOf>{avg_score} out of 5</ScoreOutOf>
