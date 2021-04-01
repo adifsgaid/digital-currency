@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "../Rating/Rating";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -24,14 +25,12 @@ const RatingContainer = styled.div`
   flex-direction: row;
 `;
 
-const RtingScore = styled.div``;
-
 function Review(props) {
   const { rating, title, description } = props.attributes;
   return (
     <Card>
       <RatingContainer>
-        <div className="rating-score">{rating}</div>
+        <Rating rating={rating} />
       </RatingContainer>
       <Title>{title}</Title>
       <Description>{description}</Description>
