@@ -9,6 +9,7 @@ const Card = styled.div`
   margin: 0px 0px 20px 0px;
   position: relative;
   margin-right: 12px;
+  margin-left: 5px;
 `;
 const Title = styled.div`
   padding: 20px 0px 0px 0px;
